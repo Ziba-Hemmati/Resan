@@ -9,3 +9,6 @@
 * {
   font-family: IranSans;
 }
+html {
+  scroll-behavior: smooth;
+}
