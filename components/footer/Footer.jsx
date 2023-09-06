@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="flex justify-center flex-wrap items-center mb-10">
         {footerItems.map((item, index) => {
           return (
-            <div>
+            <div key={item}>
               {item}
               {!(footerItems.length - 1 === index) && (
                 <span className="text-gray-400 mx-2 leading-10">|</span>
