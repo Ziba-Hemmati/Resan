@@ -1,3 +1,4 @@
+import { useCallback, useState } from "react";
 import logo from "@/assets/logo.png";
 import profile from "@/assets/profile.jpg";
 import { GoBell } from "react-icons/go";
@@ -6,7 +7,6 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import Image from "next/image";
 import iran from "@/assets/iran.png";
 import usa from "@/assets/usa.jpg";
-import { useCallback, useState } from "react";
 import { clsx } from "clsx";
 const menuItems = [
   "داشبورد",
@@ -60,15 +60,12 @@ const Banner = ({ handleMenu }) => {
           width={30}
           className="mx-auto mt-[120px] md:hidden"
         />
-        <ul className="md:flex text-white justify-center mt-[120px] hidden ">
+        <ul className="md:flex text-white justify-center mt-[120px] hidden text-sm">
           {menuItems.map((item, index) => {
             return (
               <li
                 key={item}
-                className={clsx(
-                  `${!(index === menuItems.length - 1) && "ml-8"}`,
-                  "text-sm"
-                )}
+                className={clsx(!(index === menuItems.length - 1) && "ml-8")}
               >
                 {item}
               </li>

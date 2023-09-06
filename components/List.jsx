@@ -5,11 +5,9 @@ const List = ({ item, index, menuItems }) => {
     <div
       key={item}
       className={clsx(
-        `${
-          menuItems.length - 1 === index
-            ? "pt-6"
-            : "border-b border-black pt-6 pb-3"
-        }`,
+        menuItems.length - 1 === index
+          ? "pt-6"
+          : "border-b border-black pt-6 pb-3",
         "mx-6 text-sm pr-4 text-gray-600"
       )}
     >
