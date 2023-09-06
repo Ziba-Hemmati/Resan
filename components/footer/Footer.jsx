@@ -6,7 +6,7 @@ const footerItems = ["نسخه تلفن همراه", "شرایط", "جزئیات
 
 const Footer = () => {
   return (
-    <div className="bg-[#3e3d42] w-full h-[270px] absolute top-[1600px] text-[.7rem] text-white p-4">
+    <div className="bg-[#3e3d42] w-full h-[270px] absolute top-[1600px] md:top-[1250px] text-[.7rem] text-white p-4">
       <div className="flex justify-center flex-wrap items-center mb-10">
         {footerItems.map((item, index) => {
           return (
