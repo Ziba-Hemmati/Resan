@@ -12,8 +12,8 @@ import { BiGroup } from "react-icons/bi";
 const Profile = () =>
   useMemo(() => {
     return (
-      <div className="flex justify-center">
-        <div className="absolute top-64 w-full px-4 md:left-0">
+      <div className="md:flex">
+        <div className="absolute top-64 w-full md:w-[40%] px-4 md:left-0 md:mt-12">
           <Image
             src={profile}
             alt="Profile"
@@ -54,7 +54,7 @@ const Profile = () =>
           </Content>
           <Button>مشاهده همه (1)</Button>
         </div>
-        <div className="absolute top-[1160px] w-full px-4">
+        <div className="absolute top-[1160px] w-full md:w-[60%] md:top-64 px-4 md:mt-8">
           <div className="border border-[#34ABE3]"></div>
 
           <div>
@@ -108,7 +108,7 @@ const Profile = () =>
                 <BiGroup className="text-xl" />
               </p>
             </div>
-            {/* <div className="border border-[#34ABE3] mb-10"></div> */}
+            <div className="border border-[#34ABE3] mb-10"></div>
           </div>
         </div>
       </div>
