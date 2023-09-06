@@ -8,10 +8,10 @@ const Header = () => {
   const [menu, setMenu] = useState(false);
   const handleMenu = useCallback(() => setMenu((prev) => !prev), [menu]);
   return (
-    <nav>
+    <div>
       <Banner handleMenu={handleMenu} />
       {menu && <Menu handleMenu={handleMenu} />}
-    </nav>
+    </div>
   );
 };
 
