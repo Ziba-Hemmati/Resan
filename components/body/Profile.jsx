@@ -108,7 +108,7 @@ const Profile = () =>
                 <BiGroup className="text-xl" />
               </p>
             </div>
-            <div className="border border-[#34ABE3] mb-10"></div>
+            {/* <div className="border border-[#34ABE3] mb-10"></div> */}
           </div>
         </div>
       </div>
