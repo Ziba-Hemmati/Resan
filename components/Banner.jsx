@@ -7,6 +7,15 @@ import Image from "next/image";
 import iran from "@/assets/iran.png";
 import usa from "@/assets/usa.jpg";
 import { useCallback, useState } from "react";
+import { clsx } from "clsx";
+const menuItems = [
+  "داشبورد",
+  "اعضا",
+  "تصاویو ",
+  "ویدیوها",
+  "هشتگ‌ها",
+  "گروه‌ها",
+];
 
 const Banner = ({ handleMenu }) => {
   const [lang, setLang] = useState(false);
@@ -14,13 +23,19 @@ const Banner = ({ handleMenu }) => {
   return (
     <>
       <div className="banner border-b-4 border-blue-400 absolute">
-        <div className="flex items-center">
-          <div className="w-[60%]">
+        <div className="flex items-center justify-between">
+          <div className="w-[60%] md:hidden">
             <RxHamburgerMenu
               className="mt-8 mr-4 text-xl text-white md:hidden "
               onClick={handleMenu}
             />
           </div>
+          <Image
+            alt="Logo"
+            src={logo}
+            width={30}
+            className="mr-4 mt-8 hidden md:inline-block"
+          />
           <div className="flex flex-row-reverse items-center text-white w-[40%] mt-8 ml-4">
             <Image
               alt="Profile"
@@ -45,6 +60,21 @@ const Banner = ({ handleMenu }) => {
           width={30}
           className="mx-auto mt-[120px] md:hidden"
         />
+        <ul className="md:flex text-white justify-center mt-[120px] hidden ">
+          {menuItems.map((item, index) => {
+            return (
+              <li
+                key={item}
+                className={clsx(
+                  `${!(index === menuItems.length - 1) && "ml-8"}`,
+                  "text-sm"
+                )}
+              >
+                {item}
+              </li>
+            );
+          })}
+        </ul>
       </div>
       {lang && (
         <div className="bg-white w-[124px] p-3 text-gray-500 rounded-md absolute top-[70px] left-4">
