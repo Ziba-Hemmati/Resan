@@ -44,7 +44,10 @@ const Banner = ({ handleMenu }) => {
             />
             <GoBell className="text-lg mx-2" />
             <BiSearch className="text-xl" />
-            <p onClick={handleLang} className="flex items-center text-sm cursor-pointer">
+            <p
+              onClick={handleLang}
+              className="flex items-center text-sm cursor-pointer"
+            >
               فا
               <Image
                 alt="Iran-Flag"
@@ -65,7 +68,10 @@ const Banner = ({ handleMenu }) => {
             return (
               <li
                 key={item}
-                className={clsx(!(index === menuItems.length - 1) && "ml-8")}
+                className={clsx(
+                  !(index === menuItems.length - 1) && "ml-8",
+                  " cursor-pointer hover:text-blue-100 hover:transition-colors duration-300"
+                )}
               >
                 {item}
               </li>
