@@ -44,7 +44,7 @@ const Banner = ({ handleMenu }) => {
             />
             <GoBell className="text-lg mx-2" />
             <BiSearch className="text-xl" />
-            <p onClick={handleLang} className="flex items-center text-sm ">
+            <p onClick={handleLang} className="flex items-center text-sm cursor-pointer">
               فا
               <Image
                 alt="Iran-Flag"
