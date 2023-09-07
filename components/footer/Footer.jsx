@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { AiFillAndroid } from "react-icons/ai";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
-
+import footer from "@/assets/footer.png";
+import Image from "next/image";
 const footerItems = ["نسخه تلفن همراه", "شرایط", "جزئیات نشست", "تماس با ما"];
 
 const Footer = () => {
@@ -25,7 +26,13 @@ const Footer = () => {
         </div>
         <AiFillAndroid className="text-lg mr-1" />
       </button>
-      <p className="text-sm text-center pt-10">رسان</p>
+      <div className="md:flex md:items-center md:my-4 md:mr-6  ">
+        <Image src={footer} className="w-9 hidden md:inline-block " />
+        <div className="md:text-[.6rem]">
+        <p className="text-[.7rem] font-bold text-center pt-10 md:pt-0 md:pr-4 md:text-right leading-10" >رسان</p>
+        <p className="hidden md:inline-block pr-4 ">تمام حقوق محفوظ است</p>
+        </div>
+      </div>
       <Link href={""}>
         <BsFillArrowUpCircleFill className="absolute left-4 bottom-4 text-lg" />
       </Link>
